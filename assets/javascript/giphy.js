@@ -1,6 +1,67 @@
 $(document).ready(function () {
 
-    //grabbing the click and input
+
+    function getURL(search) {
+        return "https://api.giphy.com/v1/gifs/search?q=" + search + "&api_key=z97a11B7OMWkWo2ajStc013lzJbri8w0&limit=15";
+    }
+
+
+    function callGiphy() {
+        $.ajax({
+            url: getURL(search),
+            method: "GET"
+        }).then(function (response) {
+
+
+        }).error(function(request,response,error){
+            console.log(error); 
+
+        })
+
+
+    }
+
+
+    function displayGiphy() {
+
+        var giphyDiv; 
+        var giphy = 
+        var giphyRate; 
+
+
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*//grabbing the click and input
     $('button').on('click', function () {
         var movie = $(this).data('name');
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + movie + "&api_key=dc6zaTOxFJmzC&limit=4"; // limiting the result to four images
