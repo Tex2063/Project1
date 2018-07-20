@@ -44,93 +44,89 @@ $(document).ready(function () {
                     movieDiv.prependTo($('#gifs'));
                 }
                 //when image is clicked do the following
-
-                    }
-                });
             });
     });
+});
 
-    var movies = [''];
+var movies = [''];
 
 
-    //adds the buttons 
+//adds the buttons 
 
-    // handles event when clicked
-    $('#theButton').on('click', function () {
-        var movieButton = $("#gif-input").val();
+// handles event when clicked
+$('#theButton').on('click', function () {
+    var movieButton = $("#gif-input").val();
 
-        //adds new search
-        var newButton = $("<button/>").addClass("btn btn-info movie").attr('data-name', movieButton).html(movieButton).css({ 'margin': '5px' });
+    //adds new search
+    var newButton = $("<button/>").addClass("btn btn-info movie").attr('data-name', movieButton).html(movieButton).css({ 'margin': '5px' });
 
-        //creates new button
-        $("#moviesbuttons").append(newButton);
-        console.log("Work");
+    //creates new button
+    $("#moviesbuttons").append(newButton);
+    console.log("Work");
 
-        //query to the giphy api with the movie button and api key
-        queryURL = "https://api.giphy.com/v1/gifs/search?q=" + movieButton + "&api_key=dc6zaTOxFJmzC&limit=4";
-        console.log(movieButton);
+    //query to the giphy api with the movie button and api key
+    queryURL = "https://api.giphy.com/v1/gifs/search?q=" + movieButton + "&api_key=dc6zaTOxFJmzC&limit=4";
+    console.log(movieButton);
 
-        //ajax to go get the giphy results
-        $.ajax({
-            url: queryURL,
-            method: 'GET'
-        })
-
-            .done(function (response) {
-
-                // waiting for the results
-                var results = response.data;
-
-                for (var i = 0; i < results.length; i++) {
-
-                    var movieDiv = $('<div/>');
-
-                    var p = $('<p/>');
-
-                    p.text(results[i].rating);
-
-                    var movieImage = $('<img/>');
-
-                    movieImage.addClass('anImg')
-
-                    movieImage.attr('src', results[i].images.fixed_height_still.url);
-
-                    movieImage.attr('data-still', results[i].images.fixed_height_still.url)
-
-                    movieImage.attr('data-animate', results[i].images.fixed_height.url)
-
-                        .attr('data-state', 'still');
-
-                    movieDiv.append(p);
-
-                    movieDiv.append(movieImage);
-
-                    movieDiv.prependTo($('#gifs'));
-                }
-
-                $('.anImg').on('click', function () {
-
-                    // setting the result ti still or animate
-                    var state = $(this).attr('data-state');
-                    console.log(this);
-
-                    if (state == 'still') {
-
-                        $(this).attr('src', $(this).data('animate'));
-
-                        $(this).attr('data-state', 'animate');
-
-                    } else {
-
-                        $(this).attr('src', $(this).data('still'));
-
-                        $(this).attr('data-state', 'still');
-                    }
-                });
-            });
-
-        $("#gif-input").val("");
-        return false;
+    //ajax to go get the giphy results
+    $.ajax({
+        url: queryURL,
+        method: 'GET'
     })
 
+        .done(function (response) {
+
+            // waiting for the results
+            var results = response.data;
+
+            for (var i = 0; i < results.length; i++) {
+
+                var movieDiv = $('<div/>');
+
+                var p = $('<p/>');
+
+                p.text(results[i].rating);
+
+                var movieImage = $('<img/>');
+
+                movieImage.addClass('anImg')
+
+                movieImage.attr('src', results[i].images.fixed_height_still.url);
+
+                movieImage.attr('data-still', results[i].images.fixed_height_still.url)
+
+                movieImage.attr('data-animate', results[i].images.fixed_height.url)
+
+                    .attr('data-state', 'still');
+
+                movieDiv.append(p);
+
+                movieDiv.append(movieImage);
+
+                movieDiv.prependTo($('#gifs'));
+            }
+
+            $('.anImg').on('click', function () {
+
+                // setting the result ti still or animate
+                var state = $(this).attr('data-state');
+                console.log(this);
+
+                if (state == 'still') {
+
+                    $(this).attr('src', $(this).data('animate'));
+
+                    $(this).attr('data-state', 'animate');
+
+                } else {
+
+                    $(this).attr('src', $(this).data('still'));
+
+                    $(this).attr('data-state', 'still');
+                }
+            });
+        });
+
+    $("#gif-input").val("");
+    return false;
 });
