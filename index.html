@@ -1,22 +1,76 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" crossorigin="anonymous">
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"  crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"  crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"  crossorigin="anonymous"></script>
-  </body>
+
+
+  <title>Rotten Gifs!</title>
+</head>
+
+<body>
+  <h1>Rotten Gifs</h1>
+
+  <!-- Where user puts in the movie to search -->
+  <div style="float:right; margin-top:90px;">
+    <h4>Search for a Movie</h4>
+    <form id="movie-form">
+      <label for="movie-input"></label>
+      <input type="text" value="" id="movie-input">
+      <br>
+      <br>
+
+      <!--Creates the submit button-->
+      <input type="submit" name="Button" class="btn btn-success" id="theButton" style="margin-left:8px">
+    </form>
+  </div>
+
+  <!-- This is where the Movie Poster, Plot, and Ratings will go -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        MOVIE POSTER HERE
+      </div>
+      <div class="col-md-4">
+        PLOT HERE
+      </div>
+      <div class="col-md-4">
+        RATING HERE
+      </div>
+    </div>
+  </div>
+
+  <!-- Where the gifs will show -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        GIF 1 HERE
+      </div>
+      <div class="col-md-3">
+        GIF 2 HERE
+      </div>
+      <div class="col-md-3">
+        GIF 3 HERE
+      </div>
+      <div class="col-md-3">
+        GIF 4 HERE
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" crossorigin="anonymous"></script>
+</body>
+
 </html>
