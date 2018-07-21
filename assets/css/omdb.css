@@ -1,10 +1,10 @@
 .omdb {
-
+    color: white;
 }
 .moviePoster {
     height: 500px;
     background-image: url("../images/placeholderMP.jpg");
-    background-size: 300px 400px;
+    background-size: 100%;
     background-repeat: no-repeat;    
 }
 
@@ -14,5 +14,5 @@
 }
 
 .movieRating {
-
+    color: white
 }

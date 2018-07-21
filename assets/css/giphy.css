@@ -2,14 +2,12 @@ body {
     margin: 25px;
     background-image: url("../images/background.jpg");
     margin-bottom: 60px;
-    text: white;
+    color: white;
 
 }
 
 h1, div { 
     color: white;
-    border: solid 5px green;
-    text-align: center;
 }
 
 .container {
