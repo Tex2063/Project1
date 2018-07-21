@@ -30,4 +30,8 @@ var createRow = function(data) {
     });
   };
 
-  searchOMDB(movie);
+  $("#button").on("click", function() {
+    alert("I've been clicked!");
+  });
+
+  
