@@ -8,16 +8,16 @@ body {
 
 h1, div { 
     color: white;
+    border: solid 5px green;
+    text-align: center;
 }
 
 .container {
     border: solid 5px green;
-    margin: 5px;
 
 }
 
 .moviePoster {
-    border: solid 1px green; 
     height: 500px;
     background-image: url("../images/placeholderMP.jpg");
     background-size: 300px 400px;
@@ -25,6 +25,5 @@ h1, div {
     
 }
 
-.rottenTomatoes {
-    margin-bottom: 5px;
+.omdb {
 }
