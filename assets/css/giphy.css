@@ -16,14 +16,3 @@ h1, div {
     border: solid 5px green;
 
 }
-
-.moviePoster {
-    height: 500px;
-    background-image: url("../images/placeholderMP.jpg");
-    background-size: 300px 400px;
-    background-repeat: no-repeat;
-    
-}
-
-.omdb {
-}
