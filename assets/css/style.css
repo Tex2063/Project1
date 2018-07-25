@@ -1,0 +1,47 @@
+/* MAIN CSS */ 
+
+body {
+    margin: 25px;
+    background-image: url("../images/background.jpg");
+    margin-bottom: 60px;
+    color: white;
+
+}
+
+h1, div { 
+    color: white;
+}
+
+.container {
+    border: solid 5px goldenrod;
+
+}
+
+/* OMDB CSS */ 
+
+.omdb {
+    color: white;
+}
+.moviePoster {
+    height: 500px;
+    /* background-image: url("../images/placeholderMP.jpg"); */
+    background-size: 100%;
+    background-repeat: no-repeat;    
+}
+
+#movieName {
+    text-align: center'
+
+}
+.moviePlot {
+    color: white;
+    font-style: italic;
+}
+
+.movieRating {
+    color: white
+}
+
+
+
+/* GIPHY CSS */

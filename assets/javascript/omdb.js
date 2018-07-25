@@ -55,12 +55,12 @@ console.log(response);
 
 
     //add movie title
-    $("#movieName").text(movieName);
+    $(".movieName").text(movieName);
 
     //add movie plot 
-    $("#moviePlot").text(moviePlot);
+    $(".moviePlot").text(moviePlot);
 
-    $("#movieRating").text("Ratings: "+ rating);
+    $(".movieRating").text("Ratings: "+ rating);
     console.log(rating);
   }
 
