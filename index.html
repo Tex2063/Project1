@@ -1,22 +1,103 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/omdb.css">
+  <!-- Style link to how we want the OMDB results to appear-->
+  <link rel="stylesheet" href="assets/css/giphy.css">
+  <!-- Style link to how we want the Giphy results to appear-->
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"  crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"  crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"  crossorigin="anonymous"></script>
-  </body>
+  <title>Rotten Gifs!</title>
+</head>
+
+<body>
+  <h1>Rotten Gifs</h1>
+
+  <!-- Where user puts in the movie to search -->
+  <div style="float:right; margin-top:90px;">
+    <h4>Search for a Movie</h4>
+    <form id="movie-form">
+      <label for="movie-input"></label>
+      <input type="text" value="" id="movie-input">
+      <br>
+      <br>
+
+      <!--Creates the submit button-->
+      <input type="submit" name="Button" class="btn btn-success" id="theButton" style="margin-left:8px">
+    </form>
+  </div>
+
+  <!-- This is where the Movie Poster, Plot, and Ratings will go -->
+  <!-- SHOULD WE USE TABLES? -->
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col" id="movieName">Movie Name</th>
+        <th scope="col" id="moviePlot"> PLOT HERE~ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae consectetur ante. Donec vel neque
+          a ex volutpat sodales vel quis magna. Nulla at ornare augue. Morbi venenatis at massa at consequat. Orci varius
+          natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc imperdiet metus id risus faucibus,
+          tincidunt feugiat enim ultrices.</th>
+        <th scope="col" class="movieRating" id="movieRating">Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Insert movie rows here -->
+    </tbody>
+  </table>
+
+  <div>MOVIE TITLE HERE</div>
+
+  <div class="container" class="omdb">
+    <div class="row">
+      <div class="col-md-4 moviePoster">
+        MOVIE POSTER HERE
+      </div>
+      <div class="col-md-4 moviePlot" id="moviePlotFull">
+        PLOT HERE~ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae consectetur ante. Donec vel neque a ex volutpat
+        sodales vel quis magna. Nulla at ornare augue. Morbi venenatis at massa at consequat. Orci varius natoque penatibus
+        et magnis dis parturient montes, nascetur ridiculus mus. Nunc imperdiet metus id risus faucibus, tincidunt feugiat
+        enim ultrices.
+      </div>
+      <div class="col-md-4 movieRating">
+        This movie totally rocks! If you like crappy movies!
+      </div>
+    </div>
+  </div>
+
+  <!-- Where the gifs will show -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 gif1">
+        GIF 1 HERE
+      </div>
+      <div class="col-md-3 gif2">
+        GIF 2 HERE
+      </div>
+      <div class="col-md-3 gif3">
+        GIF 3 HERE
+      </div>
+      <div class="col-md-3 gif4">
+        GIF 4 HERE
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <script src="assets/javascript/omdb.js"></script>
+  <!--OMDB Script-->
+  <!--<script src="assets/javascript/giphy.js"></script>-->
+  <!--Giphy Script-->
+</body>
+
 </html>

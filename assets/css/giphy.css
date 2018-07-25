@@ -1,0 +1,16 @@
+body {
+    margin: 25px;
+    background-image: url("../images/background.jpg");
+    margin-bottom: 60px;
+    color: white;
+
+}
+
+h1, div { 
+    color: white;
+}
+
+.container {
+    border: solid 5px green;
+
+}
