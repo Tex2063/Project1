@@ -6,7 +6,7 @@ $(document).ready(function () {
 
   // return API link with searched item
   function getUrlOmdb(search) {
-    //return search
+    
     return "https://www.omdbapi.com/?t=" + search + "&y=&plot=short&apikey=9170740"
     
 
@@ -32,17 +32,22 @@ $(document).ready(function () {
   function getInput(input) {
 
     $("#theButton").on("click", function (event) {
-      event.preventDefault();
+      // event.preventDefault();
       input = $("#movie-input").val().trim();
-      console.log(input);
+      if (input ==""){
+        alert("please enter a movie name"); 
+    }
+    else{
+      //console.log(input);
       callOmdb(input);
       //console.log(getUrlOmdb(input)); 
+    }
 
     });
   }
 
   function handleResponse(response) {
-console.log(response);
+//console.log(response);
     var rottenDiv; 
     var poster = response.Poster;
     var moviePlot=response.Plot;
@@ -51,7 +56,7 @@ console.log(response);
     
 
     //append movie poster
-    $(".moviePoster").append("<img src=" + poster +">"+"</img>");
+    $(".moviePoster").html("<img src=" + poster +">"+"</img>");
 
 
     //add movie title
@@ -61,7 +66,7 @@ console.log(response);
     $("#moviePlot").text(moviePlot);
 
     $("#movieRating").text("Ratings: "+ rating);
-    console.log(rating);
+    //console.log(rating);
   }
 
 getInput(); 
