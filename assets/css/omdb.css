@@ -1,0 +1,18 @@
+.omdb {
+    color: white;
+}
+.moviePoster {
+    height: 500px;
+    background-image: url("../images/placeholderMP.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;    
+}
+
+.moviePlot {
+    color: white;
+    font-style: italic;
+}
+
+.movieRating {
+    color: white
+}
