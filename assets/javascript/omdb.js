@@ -29,7 +29,7 @@ $(document).ready(function () {
   }
 
 
-  function getInput(input) {
+  //function getInput(input) {
 
     $("#theButton").on("click", function (event) {
       // event.preventDefault();
@@ -44,7 +44,8 @@ $(document).ready(function () {
     }
 
     });
-  }
+    // return input; 
+  //}
 
   function handleResponse(response) {
 //console.log(response);
@@ -60,7 +61,7 @@ $(document).ready(function () {
 
 
     //add movie title
-    $(".movieName").text(movieName);
+    $("#movieName").text(movieName);
 
     //add movie plot 
     $(".moviePlot").text(moviePlot);
@@ -70,7 +71,7 @@ $(document).ready(function () {
 
   }
 
-getInput(); 
+//getInput(); 
 
 });
 
