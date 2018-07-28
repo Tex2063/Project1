@@ -5,18 +5,18 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/css/style.css"> <!-- Link to stlyesheet -->
- 
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Link to stlyesheet -->
+
 
   <title>Rotten Gifs!</title>
 </head>
 
 <body>
   <h1>Rotten Gifs</h1>
-
+ 
   <!-- Where user puts in the movie to search -->
   <div style="float:right; margin-top:90px;">
     <h4>Search for a Movie</h4>
@@ -36,7 +36,9 @@
   <table class="table">
     <thead>
       <tr>
-        <th scope="col" id="movieName">Movie Name</th>
+        <th scope="col" class="movieName" id="movieName filmreel">
+          <!--MOVIE NAME HERE-->
+        </th>
       </tr>
     </thead>
     <tbody>
@@ -44,12 +46,10 @@
     </tbody>
   </table>
 
-  <div>MOVIE TITLE HERE</div>
-
   <div class="container" class="omdb">
     <div class="row">
       <div class="col-md-4 moviePoster">
-        MOVIE POSTER HERE
+        <!-- MOVIE POSTER HERE -->
       </div>
       <div class="col-md-4 moviePlot" id="moviePlotFull">
         <!-- MOVIE PLOT GOES HERE -->
@@ -62,18 +62,18 @@
 
   <!-- Where the gifs will show -->
   <div class="container">
-    <div class="row" id="giphyPic" >
-      <div class="col-md-3 gif1">
-        GIF 1 HERE
+    <div class="row" id="giphyPic">
+      <div class="col-md-3 gif">
+        <!-- GIF 1 HERE -->
       </div>
-      <div class="col-md-3 gif2">
-        GIF 2 HERE
+      <div class="col-md-3 gif">
+        <!-- GIF 2 HERE -->
       </div>
-      <div class="col-md-3 gif3">
-        GIF 3 HERE
+      <div class="col-md-3 gif">
+        <!-- GIF 3 HERE -->
       </div>
-      <div class="col-md-3 gif4">
-        GIF 4 HERE
+      <div class="col-md-3 gif">
+        <!-- GIF 4 HERE -->
       </div>
     </div>
   </div>
@@ -88,7 +88,7 @@
   <script src="assets/javascript/omdb.js"></script>
   <!--Giphy Script-->
   <script src="assets/javascript/giphy.js"></script>
-  
+
 </body>
 
 </html>
