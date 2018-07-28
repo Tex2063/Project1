@@ -1,25 +1,5 @@
 
-
-//  function getInput(input) {
-
-    $("#theButton").on("click", function (event) {
-        event.preventDefault();
-        input = $("#movie-input").val().trim();
-        console.log(input);
-        if (input === "") {
-            alert("please enter a movie name");
-        }
-        else {
-            callGiphy(input);
-        }
-
-    }); 
-    // return input
-// }
-
-
-
-//$(document).ready(function () {
+$(document).ready(function () {
 
     console.log("giphy connected");
 
@@ -51,7 +31,21 @@
 
 
 
-   
+    function getInput(input) {
+
+        $("#theButton").on("click", function (event) {
+            event.preventDefault();
+            input = $("#movie-input").val().trim();
+            console.log(input);
+            if (input === "") {
+                alert("please enter a movie name");
+            }
+            else {
+                callGiphy(input);
+            }
+
+        });
+    }
 
 
 
@@ -61,16 +55,16 @@
         // var giphyRate;
         var giphyPic = response.data;
         for (var i = 0; i < giphyPic.length; i++) {
-            $("#giphyPic").html("<img src=" + giphyPic[i].images.fixed_height.url+ ">" + "</img>");
-            
+            $("#giphyPic").append("<img src=" + giphyPic[i].images.fixed_height.url+ ">" + "</img>");
             //console.log(giphyPic);
 
         }
     }
 
-    // getInput();
+    getInput();
 
-//});
+});
+
 
 
 
