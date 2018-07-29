@@ -4,6 +4,8 @@ $(document).ready(function () {
     console.log("giphy connected");
 
 
+    var initialName = "ice age"; 
+    var search = initialName; 
 
     // return API link with searched item
     function getURLGiphy(search) {
@@ -63,7 +65,7 @@ $(document).ready(function () {
     }
 
     getInput();
-
+    callGiphy(search); 
 });
 
 

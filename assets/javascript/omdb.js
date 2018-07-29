@@ -2,14 +2,14 @@
 //$(document).ready(function () {
   console.log("connected");
 
-
-
+  var initialName = "ice age"; 
+  var search = initialName; 
   // return API link with searched item
   function getUrlOmdb(search) {
 
     return "https://www.omdbapi.com/?t=" + search + "&y=&plot=short&apikey=9170740"
 
-    
+  }
     
     
     
@@ -30,7 +30,7 @@
 
   }
 
-
+  
     //if the button is invoked, get text pass it to callOmdb
     $("#theButton").on("click", function (event) {
       // event.preventDefault();
@@ -69,4 +69,5 @@
     console.log(rating);
 
   }
+  callOmdb(search); 
 
