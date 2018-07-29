@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
 
     console.log("giphy connected");
@@ -40,6 +41,7 @@ $(document).ready(function () {
                 alert("please enter a movie name");
             }
             else {
+                $("#giphyPic").html(""); 
                 callGiphy(input);
             }
 
@@ -63,6 +65,7 @@ $(document).ready(function () {
     getInput();
 
 });
+
 
 
 

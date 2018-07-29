@@ -1,5 +1,5 @@
 
-$(document).ready(function () {
+//$(document).ready(function () {
   console.log("connected");
 
 
@@ -9,8 +9,10 @@ $(document).ready(function () {
 
     return "https://www.omdbapi.com/?t=" + search + "&y=&plot=short&apikey=9170740"
 
-
-  }
+    
+    
+    
+    
   //Establish the API connection and get values.
   function callOmdb(search) {
     $.ajax({
@@ -29,8 +31,7 @@ $(document).ready(function () {
   }
 
 
-  function getInput(input) {
-
+    //if the button is invoked, get text pass it to callOmdb
     $("#theButton").on("click", function (event) {
       // event.preventDefault();
       input = $("#movie-input").val().trim();
@@ -44,7 +45,7 @@ $(document).ready(function () {
       }
 
     });
-  }
+ 
 
   function handleResponse(response) {
     //console.log(response);
@@ -69,6 +70,3 @@ $(document).ready(function () {
 
   }
 
-  getInput();
-
-});
