@@ -25,10 +25,16 @@ function fireDatabase() {
         console.log("firebase: " + movieNamee);
 
         //pass movie name to the database
-        database.ref().push(movieNamee);
+        database.ref().push({
+            movieName: movieNamee});
     });
 
 };
+
+database.ref().on("value", function(snapshot){
+    dbMovieName = snapshot.val().movieName; 
+
+});
 
 fireDatabase();
 
