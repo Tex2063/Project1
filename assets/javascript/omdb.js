@@ -9,10 +9,10 @@
 
     return "https://www.omdbapi.com/?t=" + search + "&y=&plot=short&apikey=9170740"
 
-  }
-
-
-
+    
+    
+    
+    
   //Establish the API connection and get values.
   function callOmdb(search) {
     $.ajax({
@@ -43,6 +43,7 @@
         callOmdb(input);
         //console.log(getUrlOmdb(input)); 
       }
+
     });
  
 

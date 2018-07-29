@@ -17,6 +17,10 @@ h1, div {
 
 }
 
+#filmreel {
+    width: 100%;
+}
+
 /* OMDB CSS */ 
 
 .omdb {
@@ -24,15 +28,18 @@ h1, div {
 }
 .moviePoster {
     height: 500px;
-    /* background-image: url("../images/placeholderMP.jpg"); */
     background-size: 100%;
     background-repeat: no-repeat;    
 }
 
 #movieName {
-    text-align: center'
-
+    text-align: center;
 }
+
+.movieName {
+    text-align: center;
+}
+
 .moviePlot {
     color: white;
     font-style: italic;
