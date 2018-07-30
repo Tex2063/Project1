@@ -5,11 +5,16 @@ body {
     background-image: url("../images/background.jpg");
     margin-bottom: 60px;
     color: white;
-
+    font-size: 18px;
 }
 
 h1, div { 
     color: white;
+
+}
+
+h1{
+    font-size: 60px; 
 }
 
 .container {
@@ -47,6 +52,10 @@ h1, div {
 
 .movieRating {
     color: white
+}
+
+.gif {
+    border: 1px solid black ; 
 }
 
 
